@@ -1,0 +1,38 @@
+.submenu {
+  background-color: #ffffff;
+}
+
+.submenu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.submenu__link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+
+  &--current {
+    color: @colored-text;
+  }
+}
+
+.submenu__link-more {
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: @colored-text;
+  text-decoration: none;
+}
+
+@media (min-width: 1190px) {
+  .submenu__link {
+    font-size: 18px;
+  }
+
+  .submenu__link-more {
+    font-size: 16px;
+  }
+}
