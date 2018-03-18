@@ -28,6 +28,14 @@
   color: @colored-text;
   font-size: 14px;
   line-height: 24px;
+
+  &:hover {
+    color: lighten(@colored-text, 20%);
+  }
+
+  &:active {
+    color: darken(@colored-text, 10%);
+  }
 }
 
 @media (min-width: 960px) {

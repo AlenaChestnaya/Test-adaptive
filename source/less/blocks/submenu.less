@@ -23,6 +23,14 @@
   &--current {
     color: @colored-text;
   }
+
+  &:hover {
+    color: lighten(#000000, 40%);
+  }
+
+  &:active {
+    color: darken(@colored-text, 10%);
+  }
 }
 
 .submenu__link-more {
@@ -31,6 +39,14 @@
   text-transform: uppercase;
   color: @colored-text;
   text-decoration: none;
+
+  &:hover {
+    color: lighten(@colored-text, 20%);
+  }
+
+  &:active {
+    color: darken(@colored-text, 10%);
+  }
 }
 
 @media (min-width: 1190px) {
