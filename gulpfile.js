@@ -13,6 +13,8 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var run = require("run-sequence");
 var del = require("del");
+var js_sources = require("./bundles/js.json");
+var concat = require("gulp-concat");
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -39,6 +41,7 @@ gulp.task("serve", function() {
 
   gulp.watch("source/less/**/*.less", ["style"]);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
+  gulp.watch("source/js/*.js", ["copy-js"]);
 });
 
 gulp.task("sprite", function() {
@@ -65,7 +68,15 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
+    "source/img/**"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+});
+
+gulp.task("copy-js", function() {
+  return gulp.src([
     "source/js/**"
   ], {
     base: "source"
@@ -73,6 +84,12 @@ gulp.task("copy", function() {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task("js-vendor", function() {
+  return gulp.src(js_sources.vendor)
+    .pipe(concat("vendor.js"))
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("build", function(done) {
-  run("clean", "copy", "style", "sprite", "html", done);
+  run("clean", "copy", "copy-js", "style", "sprite", "html", "js-vendor", done);
 });
