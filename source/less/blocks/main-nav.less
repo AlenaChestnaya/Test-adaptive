@@ -10,73 +10,91 @@
 
 .main-nav__item {
   margin-bottom: 20px;
-  outline: 1px solid red;
 }
 
 .main-nav__content {
   display: block;
   position: relative;
-  padding-top: 55px;
-  padding-left: 0;
-  padding-right: 40px;
+}
+
+.main-nav__icon {
+  fill: #ffffff;
+}
+
+.main-nav__wrapper {
+  position: relative;
+  z-index: 2;
+  margin: 55px 40px 182px;
 
   &--bigger {
-    padding-top: 60px;
-  }
-
-  svg {
-    fill: #ffffff;
+    margin-top: 60px;
   }
 }
 
 .main-nav__title {
-  margin: 0;
-  margin-top: 15px;
+  margin-top: 23px;
+  margin-bottom: 0;
   font-size: 18px;
   font-weight: 700;
   font-family: @bold;
   line-height: 26px;
   color: #ffffff;
-
-  &--higher {
-    margin-top: 12px;
-  }
 }
 
 .main-nav__description {
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 14px;
   line-height: 24px;
   color: #ffffff;
 }
 
 .main-nav__submenu {
-  outline: 1px dashed yellow;
   position: absolute;
-  bottom: 0;
+  bottom: -263px;
   z-index: -1;
+}
+
+.main-nav__radiobutton:checked + .main-nav__content {
+  .main-nav__title {
+    color: #191919;
+  }
+
+  .main-nav__description {
+    color: #191919;
+  }
+
+  svg {
+    fill: #1378bf;
+  }
+}
+
+.main-nav__radiobutton:checked + .main-nav__content .main-nav__submenu {
+  z-index: 1;
 }
 
 @media (min-width: 960px) {
   .main-nav {
     flex-direction: row;
+    justify-content: space-between;
     padding: 0;
   }
 
-  .main-nav__content {
-    padding-top: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .main-nav__item {
+    margin-bottom: 0;
+  }
+
+  .main-nav__wrapper {
+    margin: 35px 20px 182px;
 
     &--bigger {
-      padding-top: 40px;
+      margin-top: 40px;
     }
   }
 }
 
 @media (min-width: 1190px) {
   .main-nav {
-    margin-top: 200px;
+    margin-top: 233px;
   }
 
   .main-nav__title {
@@ -85,16 +103,15 @@
   }
 
   .main-nav__description {
+    max-width: 275px;
     font-size: 16px;
   }
 
-  .main-nav__content {
-    padding-top: 55px;
-    padding-left: 40px;
-    padding-right: 40px;
+  .main-nav__wrapper {
+    margin: 55px 55px 182px 40px;
 
     &--bigger {
-      padding-top: 60px;
+      margin-top: 60px;
     }
   }
 }
