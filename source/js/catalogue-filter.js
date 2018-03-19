@@ -18,10 +18,10 @@ $(function() {
 });
 
 function showAll() {
-  $(filteredClass).fadeIn(200);
+  $(filteredClass).fadeIn(300);
 };
 
 function makeFilter(className) {
-  $(filteredClass).not(className).fadeOut(200);
-  $(filteredClass + className).delay(200).fadeIn(200);
+  $(filteredClass).not(className).fadeOut(300);
+  $(filteredClass + className).delay(300).fadeIn(300);
 };
