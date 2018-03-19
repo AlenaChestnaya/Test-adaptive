@@ -16,8 +16,9 @@
     </div>
 
     <header class="header">
-      <h1 class="header__title">Lorem ipsum dolor sit amet, consectetur</h1>
-      <p class="header__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="header__container">
+        <h1 class="header__title">Lorem ipsum dolor sit amet, consectetur</h1>
+        <p class="header__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <ul class="main-nav">
           <li class="main-nav__item">
             <input class="visually-hidden main-nav__radiobutton" type="radio" name="tab" id="tab-1" checked>
@@ -100,79 +101,82 @@
             </label>
           </li>
         </ul>
+      </div>
     </header>
 
     <main class="main">
-      <h2 class="main__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
-      <p class="main__description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea commodo consequat. Duis aute irure dolor. In reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-      <a class="main__link-more" href="#">Read More</a>
-      <article class="catalogue">
-        <div class="catalogue__flex-top">
-          <h3 class="catalogue__title">Lorem Ipsum Dolor</h3>
-          <ul class="catalogue__nav">
-            <li>
-              <button class="catalogue__nav-button catalogue__nav-button--current catalogue__nav-button--all" type="button" data-filter="*">All</button>
-            </li>
-            <li>
-              <button class="catalogue__nav-button" type="button" data-filter=".articles__item--web-design">Web Design</button>
-            </li>
-            <li>
-              <button class="catalogue__nav-button" type="button" data-filter=".articles__item--graphic-design">Graphic Design</button>
-            </li>
-            <li>
-              <button class="catalogue__nav-button" type="button" data-filter=".articles__item--marketing">Marketing</button>
-            </li>
-          </ul>
-        </div>
+      <div class="main__container">
+        <h2 class="main__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+        <p class="main__description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea commodo consequat. Duis aute irure dolor. In reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <a class="main__link-more" href="#">Read More</a>
+        <article class="catalogue">
+          <div class="catalogue__flex-top">
+            <h3 class="catalogue__title">Lorem Ipsum Dolor</h3>
+            <ul class="catalogue__nav">
+              <li>
+                <button class="catalogue__nav-button catalogue__nav-button--current catalogue__nav-button--all" type="button" data-filter="*">All</button>
+              </li>
+              <li>
+                <button class="catalogue__nav-button" type="button" data-filter=".articles__item--web-design">Web Design</button>
+              </li>
+              <li>
+                <button class="catalogue__nav-button" type="button" data-filter=".articles__item--graphic-design">Graphic Design</button>
+              </li>
+              <li>
+                <button class="catalogue__nav-button" type="button" data-filter=".articles__item--marketing">Marketing</button>
+              </li>
+            </ul>
+          </div>
 
-        <ul class="articles">
-          <li class="articles__item articles__item--web-design">
-            <a class="articles__link" href="#">
-              <div class="articles__back"></div>
-              <h4 class="articles__title">Item 1</h4>
-              <span class="articles__subtitle">Web Design</span>
-            </a>
-          </li>
-          <li class="articles__item articles__item--web-design">
-            <a class="articles__link" href="#">
-              <div class="articles__back articles__back--gradient"></div>
-              <h4 class="articles__title">Item 2</h4>
-              <span class="articles__subtitle">Web Design</span>
-            </a>
-          </li>
-          <li class="articles__item articles__item--graphic-design">
-            <a class="articles__link" href="#">
-              <div class="articles__back"></div>
-              <h4 class="articles__title">Item 3</h4>
-              <span class="articles__subtitle">Graphic Design</span>
-            </a>
-          </li>
-          <li class="articles__item articles__item--marketing">
-            <a class="articles__link" href="#">
-              <div class="articles__back"></div>
-              <h4 class="articles__title">Item 4</h4>
-              <span class="articles__subtitle">Marketing</span>
-            </a>
-          </li>
-          <li class="articles__item articles__item--marketing">
-            <a class="articles__link" href="#">
-              <div class="articles__back"></div>
-              <h4 class="articles__title">Item 5</h4>
-              <span class="articles__subtitle">Marketing</span>
-            </a>
-          </li>
-          <li class="articles__item articles__item--marketing">
-            <a class="articles__link" href="#">
-              <div class="articles__back"></div>
-              <h4 class="articles__title">Item 6</h4>
-              <span class="articles__subtitle">Marketing</span>
-            </a>
-          </li>
-          <!--Имитирует flex-start при фильтрации с малым количеством товаров, с сохранением space-between-->
-          <li class="articles__stub"></li>
-        </ul>
-      </article>
+          <ul class="articles">
+            <li class="articles__item articles__item--web-design">
+              <a class="articles__link" href="#">
+                <div class="articles__back"></div>
+                <h4 class="articles__title">Item 1</h4>
+                <span class="articles__subtitle">Web Design</span>
+              </a>
+            </li>
+            <li class="articles__item articles__item--web-design">
+              <a class="articles__link" href="#">
+                <div class="articles__back articles__back--gradient"></div>
+                <h4 class="articles__title">Item 2</h4>
+                <span class="articles__subtitle">Web Design</span>
+              </a>
+            </li>
+            <li class="articles__item articles__item--graphic-design">
+              <a class="articles__link" href="#">
+                <div class="articles__back"></div>
+                <h4 class="articles__title">Item 3</h4>
+                <span class="articles__subtitle">Graphic Design</span>
+              </a>
+            </li>
+            <li class="articles__item articles__item--marketing">
+              <a class="articles__link" href="#">
+                <div class="articles__back"></div>
+                <h4 class="articles__title">Item 4</h4>
+                <span class="articles__subtitle">Marketing</span>
+              </a>
+            </li>
+            <li class="articles__item articles__item--marketing">
+              <a class="articles__link" href="#">
+                <div class="articles__back"></div>
+                <h4 class="articles__title">Item 5</h4>
+                <span class="articles__subtitle">Marketing</span>
+              </a>
+            </li>
+            <li class="articles__item articles__item--marketing">
+              <a class="articles__link" href="#">
+                <div class="articles__back"></div>
+                <h4 class="articles__title">Item 6</h4>
+                <span class="articles__subtitle">Marketing</span>
+              </a>
+            </li>
+            <!--Имитирует flex-start при фильтрации с малым количеством товаров, с сохранением space-between-->
+            <li class="articles__stub"></li>
+          </ul>
+        </article>
+      </div>
     </main>
 
     <script src="js/vendor.js"></script>

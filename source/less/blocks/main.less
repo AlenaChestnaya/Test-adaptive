@@ -1,6 +1,13 @@
 .main {
-  padding-top: 50px;
   background-color: #ffffff;
+}
+
+.main__container {
+  max-width: 480px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 50px;
 }
 
 .main__title {
@@ -40,7 +47,8 @@
 }
 
 @media (min-width: 960px) {
-  .main {
+  .main__container {
+    max-width: 960px;
     padding-top: 100px;
   }
 
@@ -60,7 +68,8 @@
 }
 
 @media (min-width: 1190px) {
-  .main {
+  .main__container {
+    max-width: 1190px;
     padding-top: 208px;
   }
 

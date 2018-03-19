@@ -1,7 +1,14 @@
 .header {
-  padding: 45px 20px 0;
   background-color: @colored-text;
   background-image: linear-gradient(to right, #025d9e, #1074ba);
+}
+
+.header__container {
+  max-width: 480px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 45px 40px 0 20px;
 }
 
 .header__title {
@@ -22,7 +29,8 @@
 }
 
 @media (min-width: 960px) {
-  .header {
+  .header__container {
+    max-width: 960px;
     padding-top: 75px;
     padding-bottom: 20px;
   }
@@ -40,7 +48,8 @@
 }
 
 @media (min-width: 1190px) {
-  .header {
+  .header__container {
+    max-width: 1190px;
     padding: 241px 15px 0;
   }
 
