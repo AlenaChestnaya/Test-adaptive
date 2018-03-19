@@ -15,6 +15,7 @@
 .main-nav__content {
   display: block;
   position: relative;
+  max-width: 370px;
 }
 
 .main-nav__icon {
@@ -99,6 +100,10 @@
     }
   }
 
+  .main-nav__content {
+    max-width: 300px;
+  }
+
   .main-nav__radiobutton:checked + .main-nav__content .main-nav__wrapper {
     margin-bottom: 182px;
   }
@@ -125,5 +130,9 @@
     &--bigger {
       margin-top: 60px;
     }
+  }
+
+  .main-nav__content {
+    max-width: 370px;
   }
 }
