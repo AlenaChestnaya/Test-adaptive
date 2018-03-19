@@ -24,10 +24,10 @@
 .main-nav__wrapper {
   position: relative;
   z-index: 2;
-  margin: 55px 40px 182px;
+  margin: 35px 40px 15px;
 
   &--bigger {
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 
@@ -68,6 +68,14 @@
   }
 }
 
+.main-nav__radiobutton:checked + .main-nav__content .main-nav__wrapper {
+  margin-bottom: 240px;
+
+  &--shorter {
+    margin-bottom: 210px;
+  }
+}
+
 .main-nav__radiobutton:checked + .main-nav__content .main-nav__submenu {
   z-index: 1;
 }
@@ -89,6 +97,10 @@
     &--bigger {
       margin-top: 40px;
     }
+  }
+
+  .main-nav__radiobutton:checked + .main-nav__content .main-nav__wrapper {
+    margin-bottom: 182px;
   }
 }
 
